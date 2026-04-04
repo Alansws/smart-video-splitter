@@ -8,9 +8,11 @@ dist/
 *.spec.bak
 *.tmp
 *.log
+release/
 
 # Local packaged app bundles or caches
 *.app
+*.dmg
 
 # Temporary split outputs
 .*_part*.tmp.*

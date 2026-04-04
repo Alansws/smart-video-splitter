@@ -66,6 +66,20 @@ python3 -m pip install pyinstaller
 
 - `dist/SmartVideoSplitter.app`
 
+## Build DMG
+
+如果你希望给用户提供更直接的下载入口，可以生成 `.dmg` 安装包：
+
+```bash
+./build_dmg.sh
+```
+
+生成产物：
+
+- `dist/SmartVideoSplitter.dmg`
+
+如果通过 GitHub Release 发布，用户可以直接在 Releases 页面下载 `.dmg`。
+
 ## How It Works
 
 ### Strict Mode
@@ -93,11 +107,8 @@ python3 -m pip install pyinstaller
 - 当前支持格式：`.mp4`、`.mov`、`.mkv`
 - 输出文件默认保存在原视频所在目录
 - 建议在首次批量处理前先用单个文件验证你的目标上传平台限制
-
-## Project Positioning
-
-这是一个实用型桌面工具项目，聚焦单文件大小受限的视频上传工作流。仓库默认只发布源码、启动脚本和打包脚本，不包含本机构建产物。
+- 当前发布的 macOS App / DMG 为未签名版本；如果系统拦截，可在 Finder 中右键应用后选择“打开”
 
 ## License
 
-MIT
+Released under the MIT License. See `LICENSE` for the full text.
