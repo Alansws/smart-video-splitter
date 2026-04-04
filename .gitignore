@@ -1,0 +1,19 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+*.spec.bak
+*.tmp
+*.log
+
+# Local packaged app bundles or caches
+*.app
+
+# Temporary split outputs
+.*_part*.tmp.*
+*_part*.mp4
+*_part*.mov
+*_part*.mkv
