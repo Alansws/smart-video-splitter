@@ -13,7 +13,8 @@ English summary: A macOS desktop video splitting tool for cutting large videos i
 - 精确输入分片上限，支持 `MB` / `GB` 单位和如 `1999.5` 这样的手动值
 - `严格不超限` 模式：每个分片输出后都会校验实际体积，必要时缩短片段或重编码兜底
 - `极速无损` 模式：优先使用 `ffmpeg -c copy`，速度快并尽可能保留原始编码
-- 支持单文件或文件夹批量处理
+- 支持多个视频文件拖拽导入，也支持通过按钮一次选择多个视频
+- 支持单文件、多个文件或文件夹批量处理
 - 支持可选递归扫描子文件夹
 - 支持双击 `.command` 启动源码版
 - 支持打包为 macOS `.app`
@@ -47,6 +48,16 @@ python3 smart_video_splitter.py
 双击启动：
 
 - 直接双击 `launch_smart_video_splitter.command`
+
+## Drag And Drop
+
+在 macOS 上，窗口中会显示一个“拖拽导入”区域：
+
+- 可直接从 Finder 里选中一个或多个视频，拖到应用窗口内
+- 可拖入单个文件夹，继续配合“包含子文件夹”做批量处理
+- 非视频文件会被自动忽略；当前支持格式仍是 `.mp4`、`.mov`、`.mkv`
+
+如果某次启动后窗口里提示拖拽不可用，仍可继续使用“选择文件 / 选择文件夹”按钮。
 
 ## Build macOS App
 
@@ -107,6 +118,7 @@ python3 -m pip install pyinstaller
 - 当前支持格式：`.mp4`、`.mov`、`.mkv`
 - 输出文件默认保存在原视频所在目录
 - 建议在首次批量处理前先用单个文件验证你的目标上传平台限制
+- “选择文件”按钮支持一次选中多个视频文件
 - 当前发布的 macOS App / DMG 为未签名版本；如果系统拦截，可在 Finder 中右键应用后选择“打开”
 
 ## License
